@@ -1,0 +1,23 @@
+.section-item{
+    padding-bottom: 3rem;
+    position: relative;
+    &__title{
+        font-size: 1.6rem;
+        font-weight:300;
+        text-align::center;
+        @mixin atSmall{
+            font-size:1.8rem;
+        }
+    }
+    &__icon{ 
+        display: block;
+        margin:0 auto;
+        @mixin atSmall{
+            left:-.5rem;
+            position: absolute;
+        } 
+    }
+    @mixin atSmall{
+    padding-left:6rem;
+    } 
+}
