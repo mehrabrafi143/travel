@@ -24,11 +24,11 @@
         margin-right: auto;
         margin-bottom: 1rem;
         @mixin atSmall{
-            display: inline;
-            margin:0;
+            display: inline-block;
+            margin-right:0.5rem;
+            margin-left:0;
             position: relative;
-            top:8px;
+            top:20px;
         }
-        padding-right:1.2rem; 
     }
 }
