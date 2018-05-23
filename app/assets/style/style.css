@@ -13,4 +13,6 @@
 @import "moduels/_section-item";
 @import "moduels/_testimonial";    
 @import "moduels/_sprite"; 
-@import "moduels/_site-footer";         
+@import "moduels/_site-footer";
+@import "moduels/_site-header";                  
+@import "moduels/_nav-bar";   

@@ -1,0 +1,40 @@
+.nav-bar{
+   margin-top:14px;
+   @mixin atMedium{
+    padding:0 2rem;
+   }
+   ul{
+       padding:0;
+       margin:0;
+       list-style: none;
+   }
+   li{
+       display: inline-block;
+       margin-left: 5px;
+       font-size: .9rem;
+       @mixin atSmall{
+           margin-left:2rem;
+           font-size:1rem;
+       }
+       
+   }
+   a{
+       text-decoration: none;
+       color:#fff;
+       font-weight: 300;
+       background: rgba($mainBlue,.8);
+       display: inline-block;
+       padding:7px 5px;
+       @mixin atMedium{
+        background: none;
+        padding: 0;
+       }
+   }
+   
+   &__right{
+    @mixin atMedium{
+        float: right;
+        @mixin clearfix;
+    }
+   }
+}
