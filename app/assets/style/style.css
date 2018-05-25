@@ -15,4 +15,5 @@
 @import "moduels/_sprite"; 
 @import "moduels/_site-footer";
 @import "moduels/_site-header";                  
-@import "moduels/_nav-bar";   
+@import "moduels/_nav-bar";  
+@import "moduels/_revel-element"; 

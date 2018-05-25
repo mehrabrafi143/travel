@@ -1274,4 +1274,15 @@ a{
         clear: both;
         display: table;
     }
-    }   
+    }
+
+.revel-element{
+    opacity: 0;
+    transition: all 1s ease-out;
+    transform: scale(1.2);
+}
+
+.revel-element--is-visible{
+        opacity: 1;
+        transform: scale(1);
+    } 
