@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10325,143 +10325,6 @@ return jQuery;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _MenuItem = _interopRequireDefault(__webpack_require__(2));
-
-var _RevelOnScroll = _interopRequireDefault(__webpack_require__(3));
-
-var _jquery = _interopRequireDefault(__webpack_require__(0));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var menuItem = new _MenuItem.default();
-var feature = new _RevelOnScroll.default((0, _jquery.default)(".section-item"), "85%");
-var testimonial = new _RevelOnScroll.default((0, _jquery.default)(".testimonial"), "95%");
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _jquery = _interopRequireDefault(__webpack_require__(0));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var MenuItem =
-/*#__PURE__*/
-function () {
-  function MenuItem() {
-    _classCallCheck(this, MenuItem);
-
-    this.menuIcon = (0, _jquery.default)(".site-header__menu-icon");
-    this.menuContent = (0, _jquery.default)(".site-header__content");
-    this.siteHeader = (0, _jquery.default)(".site-header");
-    this.events();
-  }
-
-  _createClass(MenuItem, [{
-    key: "events",
-    value: function events() {
-      this.menuIcon.on("click", this.openMenu.bind(this));
-    }
-  }, {
-    key: "openMenu",
-    value: function openMenu() {
-      this.menuContent.toggleClass("site-header__content--is-visible");
-      this.siteHeader.toggleClass("site-header--is-expand");
-      this.menuIcon.toggleClass("site-header__menu-icon--x");
-    }
-  }]);
-
-  return MenuItem;
-}();
-
-var _default = MenuItem;
-exports.default = _default;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _jquery = _interopRequireDefault(__webpack_require__(0));
-
-var _noframework = _interopRequireDefault(__webpack_require__(4));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var RevelOnScroll =
-/*#__PURE__*/
-function () {
-  function RevelOnScroll(elmt, off) {
-    _classCallCheck(this, RevelOnScroll);
-
-    this.item = elmt;
-    this.offset = off;
-    this.hideItem();
-    this.revelElement();
-  }
-
-  _createClass(RevelOnScroll, [{
-    key: "hideItem",
-    value: function hideItem() {
-      this.item.addClass("revel-element");
-    }
-  }, {
-    key: "revelElement",
-    value: function revelElement() {
-      var that = this;
-      this.item.each(function () {
-        var currentItem = this;
-        new Waypoint({
-          element: currentItem,
-          handler: function handler() {
-            (0, _jquery.default)(currentItem).addClass("revel-element--is-visible");
-          },
-          offset: that.offset
-        });
-      });
-    }
-  }]);
-
-  return RevelOnScroll;
-}();
-
-var _default = RevelOnScroll;
-exports.default = _default;
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports) {
 
 /*!
@@ -11222,6 +11085,204 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
   Waypoint.Adapter = NoFrameworkAdapter
 }())
 ;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _MenuItem = _interopRequireDefault(__webpack_require__(3));
+
+var _RevelOnScroll = _interopRequireDefault(__webpack_require__(4));
+
+var _StikyHeader = _interopRequireDefault(__webpack_require__(5));
+
+var _jquery = _interopRequireDefault(__webpack_require__(0));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var menuItem = new _MenuItem.default();
+var feature = new _RevelOnScroll.default((0, _jquery.default)(".section-item"), "85%");
+var testimonial = new _RevelOnScroll.default((0, _jquery.default)(".testimonial"), "60%");
+var stikyHeader = new _StikyHeader.default();
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _jquery = _interopRequireDefault(__webpack_require__(0));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var MenuItem =
+/*#__PURE__*/
+function () {
+  function MenuItem() {
+    _classCallCheck(this, MenuItem);
+
+    this.menuIcon = (0, _jquery.default)(".site-header__menu-icon");
+    this.menuContent = (0, _jquery.default)(".site-header__content");
+    this.siteHeader = (0, _jquery.default)(".site-header");
+    this.events();
+  }
+
+  _createClass(MenuItem, [{
+    key: "events",
+    value: function events() {
+      this.menuIcon.on("click", this.openMenu.bind(this));
+    }
+  }, {
+    key: "openMenu",
+    value: function openMenu() {
+      this.menuContent.toggleClass("site-header__content--is-visible");
+      this.siteHeader.toggleClass("site-header--is-expand");
+      this.menuIcon.toggleClass("site-header__menu-icon--x");
+    }
+  }]);
+
+  return MenuItem;
+}();
+
+var _default = MenuItem;
+exports.default = _default;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _jquery = _interopRequireDefault(__webpack_require__(0));
+
+var _noframework = _interopRequireDefault(__webpack_require__(1));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var RevelOnScroll =
+/*#__PURE__*/
+function () {
+  function RevelOnScroll(elmt, off) {
+    _classCallCheck(this, RevelOnScroll);
+
+    this.item = elmt;
+    this.offset = off;
+    this.hideItem();
+    this.revelElement();
+  }
+
+  _createClass(RevelOnScroll, [{
+    key: "hideItem",
+    value: function hideItem() {
+      this.item.addClass("revel-element");
+    }
+  }, {
+    key: "revelElement",
+    value: function revelElement() {
+      var that = this;
+      this.item.each(function () {
+        var currentItem = this;
+        new Waypoint({
+          element: currentItem,
+          handler: function handler() {
+            (0, _jquery.default)(currentItem).addClass("revel-element--is-visible");
+          },
+          offset: that.offset
+        });
+      });
+    }
+  }]);
+
+  return RevelOnScroll;
+}();
+
+var _default = RevelOnScroll;
+exports.default = _default;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _jquery = _interopRequireDefault(__webpack_require__(0));
+
+var _noframework = _interopRequireDefault(__webpack_require__(1));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var StikyHeader =
+/*#__PURE__*/
+function () {
+  function StikyHeader() {
+    _classCallCheck(this, StikyHeader);
+
+    this.siteHeader = (0, _jquery.default)(".site-header");
+    this.triggerElement = (0, _jquery.default)(".large-hero__title");
+    this.waypointStikyHeader();
+  }
+
+  _createClass(StikyHeader, [{
+    key: "waypointStikyHeader",
+    value: function waypointStikyHeader() {
+      var that = this;
+      new Waypoint({
+        element: this.triggerElement[0],
+        handler: function handler(direction) {
+          if (direction == "down") {
+            that.siteHeader.addClass("site-header--dark");
+          } else {
+            that.siteHeader.removeClass("site-header--dark");
+          }
+        }
+      });
+    }
+  }]);
+
+  return StikyHeader;
+}();
+
+var _default = StikyHeader;
+exports.default = _default;
 
 /***/ })
 /******/ ]);

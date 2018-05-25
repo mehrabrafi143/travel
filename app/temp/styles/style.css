@@ -1055,7 +1055,7 @@ a{
 .site-header{
     position: absolute;
     z-index: 2;
-    transition: background .3s ease-out;
+    transition: all .3s ease-out;
     width:100%;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -1069,9 +1069,13 @@ a{
 @media (min-width: 800px){
 
 .site-header{
-        background: rgba(47,85,114,.6);
-       padding:10px
+        background: rgba(47,85,114,.3);
+        position: fixed;
+        padding:10px
 }
+        .site-header--dark{
+            background: rgba(23, 51, 72,.8);
+        }
     }
 
 .site-header__right-btn{
@@ -1102,6 +1106,7 @@ a{
         left:50%;
         transform:translateX(-50%) scale(.8);
         transform-origin:50% 0;
+        transition:all .3s ease-out;
     }
 
 @media (min-width: 800px){
@@ -1110,6 +1115,9 @@ a{
             left:auto;
             transform: none
     }
+            .site-header--dark .site-header__logo{
+                transform: scale(.61); 
+            }
     }
 
 .site-header__menu-icon{

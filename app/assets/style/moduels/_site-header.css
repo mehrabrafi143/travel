@@ -1,7 +1,7 @@
 .site-header{
     position: absolute;
     z-index: 2;
-    transition: background .3s ease-out;
+    transition: all .3s ease-out;
     width:100%;
     padding-top: 100px;
     padding-bottom: 50px;
@@ -11,8 +11,12 @@
     }
     
     @mixin atMedium{
-        background:rgba($mainBlue,.6);
-       padding:10px;
+        background:rgba($mainBlue,.3);
+        position: fixed;
+        &--dark{
+            background: rgba(23, 51, 72,.8);
+        }
+        padding:10px;
     } 
 
     
@@ -35,9 +39,13 @@
         left:50%;
         transform:translateX(-50%) scale(.8);
         transform-origin:50% 0;
+        transition:all .3s ease-out;
         @mixin atMedium{
             left:auto;
             transform: none;
+            .site-header--dark &{
+                transform: scale(.61); 
+            }
         }
     }
 
