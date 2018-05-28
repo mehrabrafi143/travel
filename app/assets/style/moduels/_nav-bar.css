@@ -37,4 +37,8 @@
         @mixin clearfix;
     }
    }
+
+   .current-item{
+       color:rgb(243, 243, 34);
+   }
 }

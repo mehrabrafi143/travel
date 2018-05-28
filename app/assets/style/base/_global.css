@@ -14,3 +14,7 @@ img {
 a{
     color:$mainOrange;
 }
+
+.no-scroll{
+    overflow-y: hidden;
+}

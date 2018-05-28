@@ -4,9 +4,11 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 class StikyHeader{
 
     constructor(){
+       this.pageSection = $(".page-section");
        this.siteHeader = $(".site-header");
        this.triggerElement = $(".large-hero__title");
        this.waypointStikyHeader();
+       this.currentLink();
     }
 
     waypointStikyHeader(){
@@ -21,6 +23,23 @@ class StikyHeader{
                 }
             }
         }); 
+    }
+
+    currentLink(){
+        this.pageSection.each( function() {
+            var currentElement = this;
+            new Waypoint({
+                element: currentElement,
+                handler: function(){
+                    var currentItem = currentElement.getAttribute("data-matching-link");
+                    if(currentItem){
+                        $(currentItem).addClass("current-item");
+                    }else{
+                        $(currentItem).removeClass("current-item");
+                    }
+                }
+            });
+        });
     }
 }
 
