@@ -13,7 +13,7 @@
        margin-right:auto;
    }
    
-   &--same-height-at-medium{
+   .flexbox &--same-height-at-medium{
        @mixin atMedium{
            display: flex;
        }
@@ -21,9 +21,9 @@
            float: none;
            display: flex;
        }
-   }
+   }  
    
-   &--same-height-at-large{
+   .flexbox &--same-height-at-large{ 
         @mixin atLarge{
             display: flex;
         }

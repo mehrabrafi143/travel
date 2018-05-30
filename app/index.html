@@ -7,6 +7,7 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes,travel"/>
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you."/>
   <link rel="stylesheet" href="temp/styles/style.css"  />
+  <script src="./temp/script/Vendor.js" ></script>
 </head>
 <body> 
   <header class="site-header" >
@@ -35,14 +36,14 @@
       <source  srcset="assets/images/hero--large.jpg" media="(min-width: 1380px)" >
       <source srcset="assets/images/hero--medium.jpg" media="(min-width: 990px)" >
       <source srcset="assets/images/hero--small.jpg" media="(min-width: 640px)" >
-      <img class="large-hero__image" srcset="assets/images/hero--smaller.jpg 640w,assets/images/hero--smaller-hi-dpi-i.jpg 1280" alt="view of mountan and ocan" >
+      <img class="large-hero__image lazyload" data-srcset="assets/images/hero--smaller.jpg 640w,assets/images/hero--smaller-hi-dpi-i.jpg 1280" alt="view of mountan and ocan" >
     </picture>
     <div class="large-hero__text-content" >
       <div class="wrapper">
         <h1 class="large-hero__title" >Your clarity.</h1>
         <h2 class="large-hero__subtitle" >One trip away.</h2>
         <p  class="large-hero__description" >We create soul restoring journeys that inspire you to be you.</p>
-        <p><a href="#" class="btn btn--orange btn--large" >Get Started Today</a></p>
+        <p><a href="#" class="btn btn--orange btn--large no-current-item" >Get Started Today</a></p>
       </div>
     </div>
   </div>
@@ -52,14 +53,14 @@
       <h2 class="headline headline--blue headline--centered  headline--light headline--less-btm-margin" >The first trip we planned <strong>was our own.</strong></h2>
       <h3 class="headline headline--orange headline--light headline--centered headline--small headline--more-btm-margin" >Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
       <div class="wrapper wrapper--nerrow wrapper--btm-margin">
-      <img src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
+      <img  class="lazyload" data-src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
       </div>
       <div class="row row--gutter">
         <div class="row__medium-4" >
           <picture>
             <source srcset="assets/images/our-start.jpg" media="(min-width: 1200px)" >
             <source srcset="assets/images/our-start-portrait.jpg" media="(min-width:800px)" />
-            <img class="row__image" srcset="assets/images/our-start-landscape.jpg 800w,assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
+            <img class="row__image lazyload" data-srcset="assets/images/our-start-landscape.jpg 800w,assets/images/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
           </picture>  
         </div>
         <div class="row__medium-8" >
@@ -106,7 +107,7 @@
     </div>
   </div>
 
-  <div id="testimonials" data-matching-link="#testimonial-link" class="page-section page-section--testimonial page-section--no-btm-padding-until-large" >
+  <div id="testimonials" data-matching-link="#testimonial-link" class="page-section page-section--testimonial page-section--no-btm-padding-until-large lazyload" >
     <div class="wrapper wrapper--no-padding-until-large">
       <h2 class="section__title section--title-blue" ><span class="section__icon section--icon-top-margin icon icon--comment" ></span> <strong>Testimonials</strong></h2>
 
@@ -114,7 +115,7 @@
         <div class="row__large-4">
            <div class="testimonial">
              <div class="testimonial__pic">
-              <img src="assets/images/testimonial-jane.jpg">
+              <img class="lazyload" data-src="assets/images/testimonial-jane.jpg">
              </div> 
               <h3 class="testimonial__title" >Jane Doe</h3>
               <h3 class="testimonial__subtitle" >9 Time Escaper</h3>
@@ -124,7 +125,7 @@
         <div class="row__large-4">
             <div class="testimonial">
                 <div class="testimonial__pic">
-                 <img src="assets/images/testimonial-john.jpg">
+                 <img class="lazyload" data-src="assets/images/testimonial-john.jpg">
                 </div>
                 <h3 class="testimonial__title">John Smith</h3>
                 <h3 class="testimonial__subtitle" >4 Time Escaper</h3>
@@ -134,7 +135,7 @@
         <div class="row__large-4">
             <div class="testimonial">
             <div class="testimonial__pic" >  
-            <img src="assets/images/testimonial-cat.jpg">
+            <img class="lazyload"  data-src="assets/images/testimonial-cat.jpg">
             </div>
             <h3 class="testimonial__title" >Cat McKitty</h3>
             <h3 class="testimonial__subtitle" >6 Time Escaper</h3>
@@ -152,7 +153,7 @@
   </footer>
   <div class="model" >
     <div class="model__menu-bar" ></div>
-    <div class="wrapper model--position " > 
+    <div class="wrapper model--position" > 
      <div class="model__title"><span class="icon icon--mail"></span>Get in <strong>Touch</strong></div>
      <div class="model__content" >We will have an online order system
        in place soon.Untill then, connect with us on any of the platform 

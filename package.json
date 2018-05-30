@@ -20,9 +20,11 @@
     "browser-sync": "^2.24.4",
     "del": "^3.0.0",
     "gulp": "3.9.1",
+    "gulp-modernizr": "^2.0.4",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.3",
     "gulp-svg-sprite": "^1.4.0",
+    "gulp-svg2png": "^2.0.2",
     "postcss-color-function": "4.0.1",
     "postcss-hexrgba": "^1.0.1",
     "postcss-import": "^11.1.0",
@@ -34,7 +36,10 @@
   "dependencies": {
     "gulp-watch": "^5.0.0",
     "jquery": "3.2.1",
+    "jquery-smooth-scroll": "^2.2.0",
+    "lazysizes": "^4.0.2",
     "normalize.css": "7.0.0",
+    "picturefill": "^3.0.2",
     "slick-carousel": "1.8.1",
     "waypoints": "^4.0.1"
   }
