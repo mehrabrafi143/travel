@@ -77,7 +77,8 @@ figure {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -113,7 +114,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -320,7 +322,8 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -353,7 +356,8 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -457,7 +461,8 @@ img {
 }
 
 *{
-    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+            box-sizing:border-box;
 }
 
 a{
@@ -567,7 +572,8 @@ a{
          left: 0;
          width: 100%;
          text-align:center;
-         transform:translateY(-50%);
+         -webkit-transform:translateY(-50%);
+                 transform:translateY(-50%);
          padding-top:90px;
     }
 
@@ -669,7 +675,7 @@ a{
 
 @media (min-width: 800px){
             .page-section--testimonial.lazyloaded{
-                background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+                background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
                 background-size:cover;
             }
     }
@@ -753,24 +759,32 @@ a{
 @media (min-width: 800px){
 
 .flexbox .row--same-height-at-medium{
+           display: -webkit-box;
+           display: -ms-flexbox;
            display: flex
    }
     }
 
 .flexbox .row--same-height-at-medium > div{
            float: none;
+           display: -webkit-box;
+           display: -ms-flexbox;
            display: flex;
        }
 
 @media (min-width: 1010px){
 
 .flexbox .row--same-height-at-large{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex
     }
     }
 
 .flexbox .row--same-height-at-large > div{
             float: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
 
@@ -957,11 +971,11 @@ a{
 /*test */
 
 .icon{
-      background-image: url('/assets/images/sprites/sprite-cbdfe7ac.svg');
+      background-image: url('../../assets/images/sprites/sprite-cbdfe7ac.svg');
     }
 
 .no-svg .icon{
-      background-image: url('/assets/images/sprites/sprite-cbdfe7ac.png');
+      background-image: url('../../assets/images/sprites/sprite-cbdfe7ac.png');
     }
 
 .icon--clear-view-escapes {
@@ -1062,6 +1076,7 @@ a{
 .site-header{
     position: absolute;
     z-index: 2;
+    -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     width:100%;
     padding-top: 100px;
@@ -1111,8 +1126,11 @@ a{
         top:0;
         text-indent:-99999px;
         left:50%;
-        transform:translateX(-50%) scale(.8);
-        transform-origin:50% 0;
+        -webkit-transform:translateX(-50%) scale(.8);
+                transform:translateX(-50%) scale(.8);
+        -webkit-transform-origin:50% 0;
+                transform-origin:50% 0;
+        -webkit-transition:all .3s ease-out;
         transition:all .3s ease-out;
     }
 
@@ -1120,10 +1138,12 @@ a{
 
 .site-header__logo{
             left:auto;
-            transform: none
+            -webkit-transform: none;
+                    transform: none
     }
             .site-header--dark .site-header__logo{
-                transform: scale(.61); 
+                -webkit-transform: scale(.61);
+                        transform: scale(.61); 
             }
     }
 
@@ -1155,7 +1175,8 @@ a{
             position: absolute;
             top:0;
             left:0;
-            transform-origin: 0% 0%;
+            -webkit-transform-origin: 0% 0%;
+                    transform-origin: 0% 0%;
         }
 
 .site-header__menu-icon--middel{
@@ -1164,7 +1185,9 @@ a{
             position: absolute;
             top:8.5px;
             background: #fff;
-            transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            -webkit-transition:all .3s  ease-out;
             transition:all .3s  ease-out
         }
 
@@ -1176,8 +1199,10 @@ a{
             position: absolute;
             bottom:0;
             left:0;
+            -webkit-transition: all .3s ease-out;
             transition: all .3s ease-out;  
-            transform-origin:0 2px;
+            -webkit-transform-origin:0 2px;  
+                    transform-origin:0 2px;
         }
 
 .site-header__menu-icon--x::before{
@@ -1188,7 +1213,8 @@ a{
             position: absolute;
             top:0;
             left:0;
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
         }
 
 .site-header__menu-icon--x .site-header__menu-icon--middel{
@@ -1203,7 +1229,8 @@ a{
             position: absolute;
             bottom:0;
             left:0;
-            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
         }
 
 .site-header__menu-icon--x-black{
@@ -1212,7 +1239,8 @@ a{
             z-index: 4;
             right:50px;
             top:30px;
-            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+                    transform: scale(1.2);
         }
 
 .site-header__menu-icon--x-black .site-header__menu-icon--x::after{
@@ -1226,8 +1254,10 @@ a{
 
 .site-header__content{
         position: relative;
+        -webkit-transition: all .3s ease-out;
         transition: all .3s ease-out;
-        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
         opacity:0;
         z-index: -10;
     }
@@ -1237,14 +1267,16 @@ a{
 .site-header__content{
             opacity: 1;
             z-index: 1;
-            transform: scale(1)
+            -webkit-transform: scale(1);
+                    transform: scale(1)
     }
     }
 
 .site-header__content--is-visible{
             opacity: 1;
             z-index: 1;
-            transform: scale(1);
+            -webkit-transform: scale(1);
+                    transform: scale(1);
         }
 
 .nav-bar{
@@ -1315,13 +1347,16 @@ a{
 
 .revel-element{
     opacity: 0;
+    -webkit-transition: all 1s ease-out;
     transition: all 1s ease-out;
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
 }
 
 .revel-element--is-visible{
         opacity: 1;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 
 .model{
@@ -1332,6 +1367,7 @@ a{
     background: rgba(245, 244, 244,1);
     z-index: -1;
     opacity: 0;
+    -webkit-transition: all .4s ease-out;
     transition: all .4s ease-out;
 
 }
@@ -1363,7 +1399,8 @@ a{
         top:20vw;
         left:50%;
         max-width: 480px;
-        transform:translateX(-50%)
+        -webkit-transform:translateX(-50%);
+                transform:translateX(-50%)
     }
     }
 
@@ -1384,7 +1421,8 @@ a{
 .model__title span{
             position: relative;
             top:12px;
-            transform: scale(.7);
+            -webkit-transform: scale(.7);
+                    transform: scale(.7);
             padding: 10px;
         }
 
@@ -1392,7 +1430,8 @@ a{
 
 .model__title span{
                 margin-right:20px;
-                transform:scale(1);
+                -webkit-transform:scale(1);
+                        transform:scale(1);
                 top:0
         }
     }
@@ -1449,13 +1488,15 @@ a{
     }
 
 .model__icon a span{
-               transform: scale(.5);
+               -webkit-transform: scale(.5);
+                       transform: scale(.5);
             }
 
 @media (min-width: 800px){
 
 .model__icon a span{
-                   transform: scale(1)
+                   -webkit-transform: scale(1);
+                           transform: scale(1)
             }
     }
 
@@ -1466,14 +1507,16 @@ a{
             width:30px;
             height: 30px;
             cursor: pointer;
-            transform: scale(.7); 
+            -webkit-transform: scale(.7);
+                    transform: scale(.7); 
         
     }
 
 @media (min-width: 800px){
 
 .model__menu-bar{
-                transform: scale(1) 
+                -webkit-transform: scale(1);
+                        transform: scale(1) 
         
     }
     }
@@ -1486,8 +1529,10 @@ a{
                 position: absolute;
                 top:0;
                 left:0;
-                transform: rotate(45deg);
-                transform-origin:10% 10%;
+                -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                -webkit-transform-origin:10% 10%;
+                        transform-origin:10% 10%;
             }
 
 @media (min-width: 800px){
@@ -1505,8 +1550,10 @@ a{
                 position: absolute;
                 bottom:0;
                 left:0;
-                transform: rotate(-45deg);
-                transform-origin:-5% 0;
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                -webkit-transform-origin:-5% 0;
+                        transform-origin:-5% 0;
             }
 
 @media (min-width: 800px){

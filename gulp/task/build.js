@@ -52,7 +52,7 @@ gulp.task('optimizeImage',['deleteDistFolder'],function(){
 
 
 gulp.task('useminTrigger',['deleteDistFolder'],function(){
-       gulp.setMaxListeners('usemin');
+       gulp.start('usemin');
 });
 
 gulp.task('usemin',['css','scripts'],function(){
